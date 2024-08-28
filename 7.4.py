@@ -39,7 +39,7 @@ mlp_adam.compile(loss='MSE',optimizer=Adam(learning_rate=0.001),
                 metrics=['accuracy'])
 hist_adam=mlp_adam.fit(x_train, y_train, batch_size=128, epochs=50,
                      validation_data=(x_test,y_test),verbose=2)
-print('Adam 정확률=', mlp_sgd.evaluate(x_test,y_test,verbose=0)[1]*100)
+print('Adam 정확률=', mlp_adam.evaluate(x_test,y_test,verbose=0)[1]*100)
 
 import matplotlib.pyplot as plt
 
